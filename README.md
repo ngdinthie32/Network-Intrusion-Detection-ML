@@ -2,7 +2,7 @@
 # Real-time Network Intrusion Detection System (IDS) using Machine Learning
 
 ## Overview
-This repository presents a real-time Intrusion Detection System (IDS) built using **machine learning models** on the [CIC-IDS2017 dataset]https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/data, developed by the Canadian Institute for Cybersecurity (CIC).
+This repository presents a real-time Intrusion Detection System (IDS) built using **machine learning models** on the [CIC-IDS2017 dataset](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/data), developed by the Canadian Institute for Cybersecurity (CIC).
 
 Traditional signature-based IDSes often fail to detect zero-day attacks. By leveraging machine learning, this system analyzes **network flow behavior** to distinguish between `BENIGN` traffic and multiple types of cyberattacks in real-time.  
 The final phase of the project includes a **real-time deployment simulation** that generates alerts in a standard **Suricata fast.log** format.
@@ -17,7 +17,8 @@ The final phase of the project includes a **real-time deployment simulation** th
 - **Network Flow Features:** Flow duration, packet lengths, ports, TCP/UDP flags, bytes per second, packets per second, etc.  
 
 ### Preprocessing Steps
-- **Data Merging:** Combined 8 CSV files into a unified dataset of ~2.8M flows.  
+- **Data Merging:** Combined 8 CSV files into a unified dataset of ~2.8M flows. 
+- **Memory Optimization:** Downcasted numeric datatypes (e.g., `int64` to `int16`/`int8`, `float64` to `float32`). This reduced the dataset's memory footprint by **56.1%**, enabling full-dataset training on all 2.8 million instances on a standard machine without RAM overflow. 
 - **Cleaning:** Removed whitespace in column names, handled `NaN`/`Infinity`, dropped redundant/zero-variance features.  
 - **Feature Selection:** Reduced to **18 core features** highly indicative of attacks (e.g., Flow Duration, Total Fwd/Bwd Packets, Packet Length stats, TCP flags).  
 - **Scaling:** Applied `StandardScaler` for normalization.  
@@ -33,19 +34,17 @@ Implemented and compared multiple supervised ML models for **binary and multi-cl
 4. K-Nearest Neighbors (KNN)  
 5. Random Forest Classifier  
 
-**Training Strategy:**  
-- Train/Test split: 80/20  
+**Training Strategy:** - Train/Test split: 80/20  
 - Evaluation metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix  
 - Special focus on **Recall for attack classes** (to minimize False Negatives).  
 
 ---
 
 ## Model Evaluation & Comparison
-```
+
 ![Accuracy Comparison](accuracy.png)
 
 ![Macro Metrics Comparison](macro.png)
-```
 
 ### Best Model Justification
 Although KNN achieved slightly higher accuracy, **Random Forest Classifier** was chosen for deployment because:
@@ -70,21 +69,19 @@ It analyzes single network flows consecutively, predicting the class and generat
 ## Setup & Installation
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ngdinthie32/Network-Intrusion-Detection-ML.git
+   git clone [https://github.com/ngdinthie32/Network-Intrusion-Detection-ML.git](https://github.com/ngdinthie32/Network-Intrusion-Detection-ML.git)
    cd Network-Intrusion-Detection-ML
    ```
 2. **Install dependencies**
    ```bash
    pip install pandas numpy scikit-learn matplotlib seaborn joblib
    ```
-3. **Download Pre-trained Model**  
-   Due to GitHub’s 100MB file size limit, the trained Random Forest model is hosted externally.  
+3. **Download Pre-trained Model** Due to GitHub’s 100MB file size limit, the trained Random Forest model is hosted externally.  
    [Download random_forest_ids.pkl](https://drive.google.com/file/d/1yfScBkL2Do9qmIIgqwfR742g33_Va0r3/view)  
    Place the `.pkl` file in the root directory of the project.
 
 
-4. **Run the project**  
-   Open `main.ipynb` in Jupyter Notebook or VS Code and execute cells sequentially.  
+4. **Run the project** Open `main.ipynb` in Jupyter Notebook or VS Code and execute cells sequentially.  
    The final cell runs the real-time simulation and populates `alerts.log`.  
 
 ---
@@ -94,3 +91,4 @@ It analyzes single network flows consecutively, predicting the class and generat
 - **README.md:** Comprehensive documentation and metrics.  
 - **Saved Model:** `random_forest_ids.pkl` (hosted externally).  
 - **Alert Logs:** `alerts.log` with Suricata-style outputs.  
+```
