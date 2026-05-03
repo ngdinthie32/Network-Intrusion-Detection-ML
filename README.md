@@ -78,8 +78,10 @@ It analyzes single network flows consecutively, predicting the class and generat
    pip install pandas numpy scikit-learn matplotlib seaborn joblib
    ```
 3. **Download Pre-trained Model**  
-   Due to GitHub’s 100MB limit, the trained Random Forest model is hosted externally.  
-   Download `random_forest_ids.pkl` and place it in the project root.  
+   Due to GitHub’s 100MB file size limit, the trained Random Forest model is hosted externally.  
+   [Download random_forest_ids.pkl](https://drive.google.com/file/d/1yfScBkL2Do9qmIIgqwfR742g33_Va0r3/view)  
+   Place the `.pkl` file in the root directory of the project.
+
 
 4. **Run the project**  
    Open `main.ipynb` in Jupyter Notebook or VS Code and execute cells sequentially.  
@@ -92,4 +94,3 @@ It analyzes single network flows consecutively, predicting the class and generat
 - **README.md:** Comprehensive documentation and metrics.  
 - **Saved Model:** `random_forest_ids.pkl` (hosted externally).  
 - **Alert Logs:** `alerts.log` with Suricata-style outputs.  
-- **Commit History:** Structured version control in GitHub repository.  
