@@ -41,11 +41,11 @@ Implemented and compared multiple supervised ML models for **binary and multi-cl
 ---
 
 ## Model Evaluation & Comparison
-
+```
 ![Accuracy Comparison](accuracy.png)
 
 ![Macro Metrics Comparison](macro.png)
-
+```
 ### Best Model Justification
 Although KNN achieved slightly higher accuracy, **Random Forest Classifier** was chosen for deployment because:
 - **Inference Speed:** KNN has $O(N)$ inference time (impractical for real-time IDS).  
@@ -91,4 +91,3 @@ It analyzes single network flows consecutively, predicting the class and generat
 - **README.md:** Comprehensive documentation and metrics.  
 - **Saved Model:** `random_forest_ids.pkl` (hosted externally).  
 - **Alert Logs:** `alerts.log` with Suricata-style outputs.  
-```
