@@ -42,7 +42,10 @@ Implemented and compared multiple supervised ML models for **binary and multi-cl
 
 ## Model Evaluation & Comparison
 
-![Model Performance Comparison](accurary.png)(macro.png)
+![Accuracy Comparison](accuracy.png)
+
+![Macro Metrics Comparison](macro.png)
+
 
 ### Best Model Justification
 Although KNN achieved slightly higher accuracy, **Random Forest Classifier** was chosen for deployment because:
