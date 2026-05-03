@@ -1,7 +1,3 @@
-Mảnh ghép cuối cùng đã xuất hiện! Vậy là chúng ta đã có đủ cả link Google Drive và link GitHub. 
-
-Mình đã lắp ráp tất cả vào bản `README.md` hoàn thiện 100% dưới đây. Lần này bạn chỉ việc copy **toàn bộ nội dung trong khung này**, dán đè lên file `README.md` của bạn là xong, không cần phải sửa thêm bất cứ một dấu phẩy nào nữa!
-
 ```markdown
 # 🛡️ Real-time Network Intrusion Detection System (IDS) using Machine Learning
 
