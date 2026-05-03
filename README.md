@@ -1,23 +1,7 @@
 ```markdown
 # 🛡️ Real-time Network Intrusion Detection System (IDS) using Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange.svg)
-![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Network%20Traffic%20Analysis-red.svg)
-![Dataset](https://img.shields.io/badge/Dataset-CIC--IDS2017-lightgrey.svg)
-
-## 📑 Table of Contents
-1. [Project Overview](#-project-overview)
-2. [Dataset & Preprocessing](#-dataset--preprocessing)
-3. [Methodology & Architecture](#-methodology--architecture)
-4. [Model Evaluation & Comparison](#-model-evaluation--comparison)
-5. [Real-time IDS Deployment (Suricata-style)](#-real-time-ids-deployment-suricata-style)
-6. [Setup & Installation](#-setup--installation)
-7. [Project Deliverables](#-project-deliverables)
-
----
-
-## 🔍 Project Overview
+## Project Overview
 This project focuses on building a robust Machine Learning-based Network Intrusion Detection System (IDS). Traditional signature-based IDSes often fail to detect zero-day attacks. By leveraging machine learning, this system analyzes network flow behavior to distinguish between `BENIGN` traffic and multiple types of cyberattacks in real-time. 
 
 The final phase of the project includes a real-time deployment simulation that generates alerts in a standard **Suricata fast.log** format.
