@@ -1,7 +1,7 @@
 ```markdown
-# 🛡️ Real-time Network Intrusion Detection System (IDS) using Machine Learning
+# Real-time Network Intrusion Detection System (IDS) using Machine Learning
 
-## 📖 Overview
+## Overview
 This repository presents a real-time Intrusion Detection System (IDS) built using **machine learning models** on the [CIC-IDS2017 dataset]https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset/data, developed by the Canadian Institute for Cybersecurity (CIC).
 
 Traditional signature-based IDSes often fail to detect zero-day attacks. By leveraging machine learning, this system analyzes **network flow behavior** to distinguish between `BENIGN` traffic and multiple types of cyberattacks in real-time.  
@@ -9,7 +9,7 @@ The final phase of the project includes a **real-time deployment simulation** th
 
 ---
 
-## 📊 Dataset Characteristics
+## Dataset Characteristics
 - **Source:** CIC-IDS2017  
 - **Traffic Types:** Normal traffic + multiple attack types  
 - **Imbalance:** Majority of records labeled as `BENIGN`  
@@ -24,7 +24,7 @@ The final phase of the project includes a **real-time deployment simulation** th
 
 ---
 
-## 🏗️ Methodology & Architecture
+## Methodology & Architecture
 Implemented and compared multiple supervised ML models for **binary and multi-class classification**:
 
 1. Logistic Regression  
@@ -40,15 +40,9 @@ Implemented and compared multiple supervised ML models for **binary and multi-cl
 
 ---
 
-## 📈 Model Evaluation & Comparison
+## Model Evaluation & Comparison
 
-| Model | Accuracy | Precision (Macro) | Recall (Macro) | F1-Score (Macro) |
-| :--- | :---: | :---: | :---: | :---: |
-| Logistic Regression | 0.833 | 0.844 | 0.836 | 0.818 |
-| Support Vector Machine (LinearSVC) | 0.796 | 0.811 | 0.797 | 0.776 |
-| Naive Bayes | 0.576 | 0.676 | 0.624 | 0.560 |
-| K-Nearest Neighbors | 0.963 | 0.959 | 0.962 | 0.961 |
-| **Random Forest (Best for Deployment)** | **0.958** | **0.955** | **0.954** | **0.951** |
+![Model Performance Comparison](accurary.png)(macro.png)
 
 ### Best Model Justification
 Although KNN achieved slightly higher accuracy, **Random Forest Classifier** was chosen for deployment because:
@@ -96,4 +90,3 @@ It analyzes single network flows consecutively, predicting the class and generat
 - **Saved Model:** `random_forest_ids.pkl` (hosted externally).  
 - **Alert Logs:** `alerts.log` with Suricata-style outputs.  
 - **Commit History:** Structured version control in GitHub repository.  
-```
