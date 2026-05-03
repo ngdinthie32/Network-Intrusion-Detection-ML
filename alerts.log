@@ -1,0 +1,2 @@
+05/01/2026-13:15:09.784  [**] [1:2027524:1] IDS DETECT WARNING: Heartbleed Traffic Detected [**] [Classification: A Network Trojan/Attack was Detected] [Priority: 1] {TCP} External_IP:Any -> Internal_Network:Any
+05/01/2026-13:15:12.071  [**] [1:2030820:1] IDS DETECT WARNING: Heartbleed Traffic Detected [**] [Classification: A Network Trojan/Attack was Detected] [Priority: 1] {TCP} External_IP:Any -> Internal_Network:Any
